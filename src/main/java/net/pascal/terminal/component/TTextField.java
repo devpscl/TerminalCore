@@ -5,6 +5,9 @@ import net.pascal.terminal.application.TerminalScreen;
 import net.pascal.terminal.key.ControlKeyInput;
 import net.pascal.terminal.key.ControlKeyType;
 import net.pascal.terminal.key.KeyInput;
+import net.pascal.terminal.text.BackgroundColor;
+import net.pascal.terminal.text.Color;
+import net.pascal.terminal.text.ForegroundColor;
 import net.pascal.terminal.text.TextDecoration;
 import net.pascal.terminal.util.Cancellable;
 import net.pascal.terminal.util.TVector;
@@ -15,6 +18,7 @@ public class TTextField extends TComponent {
     private char[] chars;
     private int pointer;
     private boolean selected;
+    private Color[] selectColors;
 
     public TTextField(int length) {
         super(new TVector(length, 1));
@@ -22,6 +26,15 @@ public class TTextField extends TComponent {
         pointer = 0;
         setSelectable(true);
         selected = false;
+        selectColors = new Color[]{ForegroundColor.BLACK, BackgroundColor.RGB_GREEN};
+    }
+
+    public void setSelectColors(Color...selectColors) {
+        this.selectColors = selectColors;
+    }
+
+    public Color[] getSelectColors() {
+        return selectColors;
     }
 
     public TTextField(int length, String text) {
@@ -96,9 +109,19 @@ public class TTextField extends TComponent {
     @Override
     public void draw(TDisplayDrawer drawer, TerminalScreen screen) {
         StringBuilder sb = new StringBuilder();
-        for (char aChar : chars) {
-            char c = aChar;
+        for (int i = 0;i<chars.length;i++) {
+            char c = chars[i];
+            boolean pointed = selected && pointer == i;
             if (c == '\u0000') c = ' ';
+            if(pointed) {
+                for(Color sc : selectColors) {
+                    sb.append(sc.getAsciiCode());
+                }
+                sb.append(c);
+                sb.append(TextDecoration.RESET.getAsciiCode()).append(getForegroundColor().getAsciiCode()).append(getBackgroundColor().getAsciiCode());
+                sb.append(TextDecoration.UNDERLINE);
+                continue;
+            }
             sb.append(c);
         }
         drawer.point();
@@ -113,7 +136,7 @@ public class TTextField extends TComponent {
 
     @Override
     public void select(TDisplayDrawer drawer, TerminalScreen screen) {
-        screen.getApplication().getTerminal().setCursorVisible(true);
+        //screen.getApplication().getTerminal().setCursorVisible(true);
         drawer.point(drawer.getCurrentPosition().clone().addWidth(pointer));
         drawer.saveCursorPosition();
 
@@ -125,7 +148,7 @@ public class TTextField extends TComponent {
 
     @Override
     public void deselect(TDisplayDrawer drawer, TerminalScreen screen) {
-        screen.getApplication().getTerminal().setCursorVisible(false);
+        //screen.getApplication().getTerminal().setCursorVisible(false);
         selected = false;
         draw(drawer, screen);
     }
@@ -155,6 +178,7 @@ public class TTextField extends TComponent {
                 }
             } else if(type == ControlKeyType.ARROW_LEFT) {
                 if(movePointerLeft()) {
+                    draw(drawer, screen);
                     drawer.point(drawer.getCurrentPosition().clone().addWidth(pointer));
                     drawer.saveCursorPosition();
                 }
@@ -163,6 +187,7 @@ public class TTextField extends TComponent {
                 }
             } else if(type == ControlKeyType.ARROW_RIGHT) {
                 if(movePointerRight()) {
+                    draw(drawer, screen);
                     drawer.point(drawer.getCurrentPosition().clone().addWidth(pointer));
                     drawer.saveCursorPosition();
                 }

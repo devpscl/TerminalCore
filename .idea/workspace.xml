@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf1cd7e9-02f2-4da3-bc28-754c35870ee7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Example/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Example/src/test/java/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.0-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/original-TerminalCore-Example-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/original-TerminalCore-Example-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/surefire-reports/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/surefire-reports/Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/test-classes/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/test-classes/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/component/TTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/component/TTextField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TerminalCore-1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TerminalCore-1.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
