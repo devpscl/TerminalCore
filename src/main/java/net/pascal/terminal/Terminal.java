@@ -292,6 +292,10 @@ public class Terminal {
         resetInputBuffer();
     }
 
+    public void writeAtPosition(String s, TVector vec) {
+        write("\033[" + vec.getRows() + ";" + vec.getColumns() + "H" + s);
+    }
+
     public KeyInput readInput() {
         int ch = getch();
         char c = (char) ch;

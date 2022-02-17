@@ -14,6 +14,7 @@ net\pascal\terminal\application\TDisplayDrawer$Queue.class
 net\pascal\terminal\util\MoveDirection.class
 net\pascal\terminal\component\TButton.class
 net\pascal\terminal\util\Cancellable.class
+net\pascal\terminal\util\ScreenFrame.class
 net\pascal\terminal\Main$3.class
 net\pascal\terminal\util\TerminalCharsetEncoding.class
 net\pascal\terminal\layout\RelativeLayout$2.class
@@ -55,6 +56,7 @@ net\pascal\terminal\component\TLabel$1.class
 net\pascal\terminal\component\TCheckBox$1.class
 net\pascal\terminal\component\TLabel.class
 net\pascal\terminal\text\BackgroundColor.class
+net\pascal\terminal\application\TerminalScreen$3.class
 net\pascal\terminal\util\DisplayDriver.class
 net\pascal\terminal\key\ControlKeyInput.class
 net\pascal\terminal\layout\AbsoluteLayout$2.class

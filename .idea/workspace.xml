@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf1cd7e9-02f2-4da3-bc28-754c35870ee7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/util/ScreenFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Example/src/test/java/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.0-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Example/target/original-TerminalCore-Example-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/original-TerminalCore-Example-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/surefire-reports/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/surefire-reports/Test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/test-classes/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/test-classes/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/component/TTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/component/TTextField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/application/TerminalScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/application/TerminalScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/TerminalCore-1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TerminalCore-1.2.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Test.txt" afterDir="false" />
     </list>
@@ -116,5 +114,16 @@
       <updated>1644087173909</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -9,10 +9,7 @@ import net.pascal.terminal.layout.AbsoluteLayout;
 import net.pascal.terminal.layout.TLayout;
 import net.pascal.terminal.text.BackgroundColor;
 import net.pascal.terminal.text.ForegroundColor;
-import net.pascal.terminal.util.Cancellable;
-import net.pascal.terminal.util.DisplayDriver;
-import net.pascal.terminal.util.MoveDirection;
-import net.pascal.terminal.util.TVector;
+import net.pascal.terminal.util.*;
 import net.pascal.terminal.util.event.KeyEventHandler;
 import net.pascal.terminal.util.event.ResizeEventHandler;
 
@@ -35,6 +32,7 @@ public class TerminalScreen {
     private LinkedHashMap<TComponent, TDisplayDrawer> components;
     private TLayout layout;
     private Terminal terminal;
+    private ScreenFrame screenFrame;
 
     private TComponent selectedComponent;
 
@@ -191,6 +189,8 @@ public class TerminalScreen {
     public void display() {
         if(displayed) {
             layout.display(this);
+            if(screenFrame != null)
+            drawFrame(screenFrame, screenFrame.getTitle());
         }
     }
 
@@ -202,6 +202,8 @@ public class TerminalScreen {
             @Override
             public void onResize(int oldX, int oldY, int newX, int newY) {
                 layout.resizeAction(TerminalScreen.this, oldX, oldY, newX, newY);
+                if(screenFrame != null)
+                drawFrame(screenFrame, screenFrame.getTitle());
             }
         });
         application.addKeyListener(mainEventHandler);
@@ -285,6 +287,67 @@ public class TerminalScreen {
         return this.components.containsKey(component);
     }
 
+    private void drawFrame(ScreenFrame frame, String title) {
+        if(frame == null) return;
+        Terminal terminal = getApplication().getTerminal();
+        TVector size = getApplication().getCachedTerminalSize();
+        TDisplayDrawer.addTaskToQueue(new DrawQueue() {
+            @Override
+            public void run(TDisplayDrawer drawer) {
+                TVector[][] vectors = getFrameRectSpecVectors(size, new TVector(0, 0));
+                for(TVector hvs : vectors[0]) {
+                    terminal.writeAtPosition(String.valueOf(frame.getTopSymbol()), hvs);
+                }
+                for(TVector vvs : vectors[1]) {
+                    terminal.writeAtPosition(String.valueOf(frame.getLeftSymbol()), vvs);
+                }
+                terminal.writeAtPosition(String.valueOf(frame.getLeftTopCornerSymbol()), vectors[2][0]);
+                terminal.writeAtPosition(String.valueOf(frame.getRightTopCornerSymbol()), vectors[2][1]);
+                terminal.writeAtPosition(String.valueOf(frame.getLeftBottomCornerSymbol()), vectors[2][2]);
+                terminal.writeAtPosition(String.valueOf(frame.getRightBottomCornerSymbol()), vectors[2][3]);
+                if(title != null)
+                terminal.writeAtPosition( " " + title + " ", new TVector(3, 0));
+            }
+        });
+
+    }
+
+    private TVector[][] getFrameRectSpecVectors(TVector vector, TVector position) {
+
+        List<TVector> horizontalVectors = new ArrayList<>();
+        List<TVector> verticalVectors = new ArrayList<>();
+        int x = position.x;
+        int y = position.y;
+        int sx = vector.x;
+        int sy = vector.y;
+        for(int i = x;i<sx;i++) {
+            horizontalVectors.add(new TVector(i, y));
+            horizontalVectors.add(new TVector(i, sy));
+        }
+        for(int i = y;i<=sy;i++) {
+            verticalVectors.add(new TVector(x, i));
+            verticalVectors.add(new TVector(sx, i));
+        }
+        TVector[] corners = new TVector[]{new TVector(x, y), new TVector(sx, y), new TVector(x, sy), new TVector(sx, sy)};
+        TVector[] hVectors = horizontalVectors.toArray(new TVector[0]);
+        TVector[] vVectors = verticalVectors.toArray(new TVector[0]);
+        return new TVector[][]{hVectors, vVectors, corners};
+    }
+
+    public void setFrame(String title) {
+        screenFrame = new ScreenFrame('┌', '┐', '└'
+                , '┘', '─', '│', title);
+        if(displayed) {
+            drawFrame(screenFrame, title);
+        }
+    }
+
+    public void setFrame(ScreenFrame frame) {
+        screenFrame = frame;
+        if(displayed) {
+            drawFrame(screenFrame, screenFrame.getTitle());
+        }
+    }
 
     public TerminalApplication getApplication() {
         return application;
