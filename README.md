@@ -3,7 +3,6 @@
   <p>
     <img src="https://img.shields.io/static/v1?label=Version&message=Alpha-1.1&color=12c970&logoColor=white" alt="Version" />
 	<br>
-	<a href="https://github.com/APICodeYT/TerminalCore/blob/main/target/TerminalCore-1.2.jar"><img src="https://img.shields.io/static/v1?label=Download JarFile&message=latest&color=12c970&logo=docusign&logoColor=white" alt="Download NetworkServer" /></a>
 	</p>
   </p>
 </div>
@@ -50,6 +49,33 @@ t.getch();
 //close
 t.dispose();
 
+```
+
+So can be screens used in a TerminalApplication. These screens are graphical interfaces with which you can add various components.
+In addition, there are different layout types. The Absolute layout is simple and does not support any resizing of the terminal.
+ Relative layouts can handle this instead and can move or resize the components when the screen is resized. The components can also be fixed so that this change is ignored.
+In addition, you can also add your own RenderHandler, with which you can use this resizing in detail.
+
+Translated with www.DeepL.com/Translator (free version)
+
+### Example (Screen Application)
+```java
+
+Terminal terminal = new Terminal(true); //enable utf8 for screen using  <= IMPORTENT!
+TerminalApplication application = new TerminalApplication(terminal);
+TerminalScreen screen = new TerminalScreen(application);
+TLabel label = new TLabel("Button: ");
+TButton button = new TButton("Click me!");
+button.setClickEvent(new Runnable() {
+    @Override
+    public void run() {
+        //action
+    }
+}); 
+screen.addComponent(label, new TVector(2, 2)); //component, position
+screen.addComponent(button, new TVector(2, 3));
+        
+application.openScreen(screen); //open screen
 ```
 
 

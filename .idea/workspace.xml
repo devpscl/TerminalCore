@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf1cd7e9-02f2-4da3-bc28-754c35870ee7" name="Default Changelist" comment="" />
+    <list default="true" id="bf1cd7e9-02f2-4da3-bc28-754c35870ee7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Example/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Example/src/test/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +22,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -28,6 +34,7 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="24heHOQGtZcfdOS5NoOYCjQEWd4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
