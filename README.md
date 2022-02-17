@@ -77,6 +77,9 @@ screen.addComponent(button, new TVector(2, 3));
 application.openScreen(screen); //open screen
 ```
 
+### 8-Bit Colorlist
+![Colors](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/8bit-colors.jpg)
+
 
 
 
