@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf1cd7e9-02f2-4da3-bc28-754c35870ee7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Example/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.0-shaded.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.1.1-shaded.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.1.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Example/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/original-TerminalCore-Example-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/target/original-TerminalCore-Example-1.1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/original-TerminalCore-Example-1.1.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/win32/terminal.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TerminalCore-0.2.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TerminalCore-0.2.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TerminalCore-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TerminalCore-1.2.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
