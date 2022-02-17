@@ -1,3 +1,13 @@
+<div align="center">
+<br/>
+  <p>
+    <img src="https://img.shields.io/static/v1?label=Version&message=Alpha-1.1&color=12c970&logoColor=white" alt="Version" />
+	<br>
+	<a href="https://github.com/APICodeYT/TerminalCore/blob/main/target/TerminalCore-1.2.jar"><img src="https://img.shields.io/static/v1?label=Download JarFile&message=latest&color=12c970&logo=docusign&logoColor=white" alt="Download NetworkServer" /></a>
+	</p>
+  </p>
+</div>
+
 # TerminalCore
 Terminal library for Windows/Linux.
 
