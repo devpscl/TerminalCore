@@ -5,7 +5,7 @@
 
     <artifactId>TerminalCore-Example</artifactId>
     <groupId>net.pascal</groupId>
-    <version>1.0</version>
+    <version>1.1.1</version>
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
@@ -60,7 +60,7 @@
         <dependency>
             <groupId>net.pascal</groupId>
             <artifactId>TerminalCore</artifactId>
-            <version>1.2</version>
+            <version>1.1.1</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
