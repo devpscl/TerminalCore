@@ -56,7 +56,6 @@ In addition, there are different layout types. The Absolute layout is simple and
  Relative layouts can handle this instead and can move or resize the components when the screen is resized. The components can also be fixed so that this change is ignored.
 In addition, you can also add your own RenderHandler, with which you can use this resizing in detail.
 
-Translated with www.DeepL.com/Translator (free version)
 
 ### Example (Screen Application)
 ```java
