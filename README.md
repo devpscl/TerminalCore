@@ -8,7 +8,7 @@
 </div>
 
 # TerminalCore
-Terminal library for Windows/Linux.
+Terminal UI library for Windows/Linux.
 
 This library contains all colors as ascii codes, native functions of the respective operating systems, cursor movement and simplified terminal functions.
 
@@ -56,7 +56,6 @@ In addition, there are different layout types. The Absolute layout is simple and
  Relative layouts can handle this instead and can move or resize the components when the screen is resized. The components can also be fixed so that this change is ignored.
 In addition, you can also add your own RenderHandler, with which you can use this resizing in detail.
 
-Translated with www.DeepL.com/Translator (free version)
 
 ### Example (Screen Application)
 ```java
@@ -77,6 +76,9 @@ screen.addComponent(button, new TVector(2, 3));
         
 application.openScreen(screen); //open screen
 ```
+
+### 8-Bit Colorlist
+![Colors](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/8bit-colors.jpg)
 
 
 
