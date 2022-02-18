@@ -8,7 +8,7 @@
 </div>
 
 # TerminalCore
-Terminal UI library for Windows/Linux.
+Terminal GUI library for Windows/Linux.
 
 This library contains all colors as ascii codes, native functions of the respective operating systems, cursor movement and simplified terminal functions.
 
