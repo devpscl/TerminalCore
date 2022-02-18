@@ -59,8 +59,8 @@
     <dependencies>
         <dependency>
             <groupId>net.pascal</groupId>
-            <artifactId>TerminalCore</artifactId>
-            <version>0.2.2</version>
+            <artifactId>terminalcore</artifactId>
+            <version>0.2.3</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
