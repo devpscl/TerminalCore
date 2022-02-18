@@ -56,11 +56,15 @@ In addition, there are different layout types. The Absolute layout is simple and
  Relative layouts can handle this instead and can move or resize the components when the screen is resized. The components can also be fixed so that this change is ignored.
 In addition, you can also add your own RenderHandler, with which you can use this resizing in detail.
 
+#### Important to use
+For the execution the library file must be in the same folder where the program resides and must be named exactly. For windows terminal32.dll and for linux terminal.so .
+To change the filename there are the public files in the TerminalHandle class. This should take place absolutely before initializing the terminal object! 
+
 
 ### Example (Screen Application)
 ```java
 
-Terminal terminal = new Terminal(true); //enable utf8 for screen using  <= IMPORTENT!
+Terminal terminal = new Terminal(true); //enable utf8 for screen using  <= IMPORTANT!
 TerminalApplication application = new TerminalApplication(terminal);
 TerminalScreen screen = new TerminalScreen(application);
 TLabel label = new TLabel("Button: ");
