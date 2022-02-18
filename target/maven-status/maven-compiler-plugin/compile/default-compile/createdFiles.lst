@@ -2,6 +2,7 @@ net\pascal\terminal\layout\RelativeLayout$1.class
 net\pascal\terminal\key\KeyInput.class
 net\pascal\terminal\layout\AbsoluteLayout.class
 net\pascal\terminal\Main.class
+net\pascal\terminal\util\RenderVectorHandler.class
 net\pascal\terminal\component\TListSelectBox$1.class
 net\pascal\terminal\component\TPaint.class
 net\pascal\terminal\layout\RelativeLayout$4.class
@@ -23,6 +24,7 @@ net\pascal\terminal\layout\RelativeLayout.class
 net\pascal\terminal\text\Color.class
 net\pascal\terminal\application\TerminalScreen.class
 net\pascal\terminal\util\AsciiCodeUtil.class
+net\pascal\terminal\component\ScrollbarBuilder.class
 net\pascal\terminal\text\ForegroundColor.class
 net\pascal\terminal\key\ControlKeyType.class
 net\pascal\terminal\util\TVector.class
@@ -33,6 +35,7 @@ net\pascal\terminal\util\OperationSystemUtil.class
 net\pascal\terminal\component\TListBox$1.class
 net\pascal\terminal\application\TerminalApplication$2.class
 net\pascal\terminal\application\TerminalScreen$1.class
+net\pascal\terminal\component\LineTextBuffer.class
 net\pascal\terminal\util\TMath.class
 net\pascal\terminal\layout\RelativeLayout$5.class
 net\pascal\terminal\component\TPasswordField.class
@@ -55,6 +58,7 @@ net\pascal\terminal\TerminalException.class
 net\pascal\terminal\component\TLabel$1.class
 net\pascal\terminal\component\TCheckBox$1.class
 net\pascal\terminal\component\TLabel.class
+net\pascal\terminal\component\TTextArea.class
 net\pascal\terminal\text\BackgroundColor.class
 net\pascal\terminal\application\TerminalScreen$3.class
 net\pascal\terminal\util\DisplayDriver.class
