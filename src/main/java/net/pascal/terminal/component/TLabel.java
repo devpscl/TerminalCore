@@ -8,21 +8,40 @@ import net.pascal.terminal.layout.TLayout;
 import net.pascal.terminal.util.Cancellable;
 import net.pascal.terminal.util.TVector;
 
+/**
+ * The type Terminal label.
+ * Stretchable: no
+ */
 public class TLabel extends TComponent {
 
     private String text;
 
+    /**
+     * Instantiates a new Terminal label.
+     *
+     * @param text the text
+     */
     public TLabel(String text) {
         super(getSize(text));
         setSelectable(false);
         this.text = text;
     }
 
+    /**
+     * Gets text.
+     *
+     * @return the text
+     */
     public String getText() {
         return text;
     }
 
 
+    /**
+     * Sets text.
+     *
+     * @param text the text
+     */
     public void setText(String text) {
         if(!isDisplaying()) {
             this.text = text;
@@ -82,6 +101,14 @@ public class TLabel extends TComponent {
         return false;
     }
 
+    /**
+     * Gets size.
+     *
+     * @deprecated internal method
+     *
+     * @param message the message
+     * @return the size
+     */
     public static TVector getSize(String message) {
         String[] msgh = message.replaceAll("\t", "").split("\n");
         int height = msgh.length;

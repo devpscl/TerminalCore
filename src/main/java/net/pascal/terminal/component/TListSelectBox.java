@@ -17,6 +17,10 @@ import net.pascal.terminal.util.TVector;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Terminal list select box.
+ * Stretchable: yes
+ */
 public class TListSelectBox extends TComponent{
 
     private List<String> elements;
@@ -31,6 +35,12 @@ public class TListSelectBox extends TComponent{
 
     private Color[] pointedColor;
 
+    /**
+     * Instantiates a new Terminal list select box.
+     *
+     * @param vec      the size
+     * @param elements the elements
+     */
     public TListSelectBox(TVector vec, List<String> elements) {
         super(new TVector());
         this.elements = elements;
@@ -49,10 +59,20 @@ public class TListSelectBox extends TComponent{
         setSelectable(true);
     }
 
+    /**
+     * Sets pointed color.
+     *
+     * @param pointedColor the pointed color
+     */
     public void setPointedColor(Color...pointedColor) {
         this.pointedColor = pointedColor;
     }
 
+    /**
+     * Get pointed color color [ ].
+     *
+     * @return the color [ ]
+     */
     public Color[] getPointedColor() {
         return pointedColor;
     }
@@ -186,10 +206,20 @@ public class TListSelectBox extends TComponent{
         return true;
     }
 
+    /**
+     * Gets elements.
+     *
+     * @return the elements
+     */
     public List<String> getElements() {
         return new ArrayList<>(elements);
     }
 
+    /**
+     * Sets elements.
+     *
+     * @param elements the elements
+     */
     public void setElements(List<String> elements) {
         this.elements = elements;
         pointer = 0;

@@ -3,6 +3,7 @@ package net.pascal.terminal.layout;
 import net.pascal.terminal.Terminal;
 import net.pascal.terminal.application.DrawQueue;
 import net.pascal.terminal.application.TDisplayDrawer;
+import net.pascal.terminal.application.TerminalApplication;
 import net.pascal.terminal.application.TerminalScreen;
 import net.pascal.terminal.component.TComponent;
 import net.pascal.terminal.key.KeyInput;
@@ -23,7 +24,7 @@ public class RelativeLayout extends TLayout {
     public void render(TComponent c, TerminalScreen screen, TDisplayDrawer drawer) {
 
         if(getRenderVectorHandler(c) != null) {
-            TVector terminalSize = screen.getApplication().getCachedTerminalSize();
+            TVector terminalSize = TerminalApplication.getCachedTerminalSize();
             if(!c.isSizeFixed()) {
                 if(c.isStretchable()) {
                     TVector vec = getRenderVectorHandler(c).getSize(c, drawer.getOriginalPosition(), drawer.getBufferedOriginalSize(), drawer, terminalSize.c());

@@ -16,6 +16,10 @@ import net.pascal.terminal.util.TVector;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Terminal list box.
+ * Stretchable: yes
+ */
 public class TListBox extends TComponent{
 
     private List<String> elements;
@@ -31,6 +35,13 @@ public class TListBox extends TComponent{
 
     private SelectEvent selectEvent;
 
+    /**
+     * Instantiates a new Terminal list box.
+     * Stretchable: yes
+     *
+     * @param vec      the size
+     * @param elements the elements
+     */
     public TListBox(TVector vec, List<String> elements) {
         super(new TVector());
         this.elements = elements;
@@ -48,14 +59,29 @@ public class TListBox extends TComponent{
         setSelectable(true);
     }
 
+    /**
+     * Sets select event.
+     *
+     * @param selectEvent the select event
+     */
     public void setSelectEvent(SelectEvent selectEvent) {
         this.selectEvent = selectEvent;
     }
 
+    /**
+     * Sets selected color.
+     *
+     * @param pointedColor the pointed color
+     */
     public void setSelectedColor(Color...pointedColor) {
         this.pointedColor = pointedColor;
     }
 
+    /**
+     * Get selected color color [ ].
+     *
+     * @return the color [ ]
+     */
     public Color[] getSelectedColor() {
         return pointedColor;
     }
@@ -186,10 +212,20 @@ public class TListBox extends TComponent{
         return true;
     }
 
+    /**
+     * Gets elements.
+     *
+     * @return the elements
+     */
     public List<String> getElements() {
         return new ArrayList<>(elements);
     }
 
+    /**
+     * Sets elements.
+     *
+     * @param elements the elements
+     */
     public void setElements(List<String> elements) {
         this.elements = elements;
         pointer = 0;
@@ -207,8 +243,17 @@ public class TListBox extends TComponent{
         }
     }
 
+    /**
+     * The interface Select event.
+     */
     public static interface SelectEvent {
 
+        /**
+         * On select.
+         *
+         * @param s     the element
+         * @param index the index
+         */
         void onSelect(String s, int index);
 
     }

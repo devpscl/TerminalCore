@@ -23,6 +23,7 @@ net\pascal\terminal\Main$1.class
 net\pascal\terminal\layout\RelativeLayout.class
 net\pascal\terminal\text\Color.class
 net\pascal\terminal\application\TerminalScreen.class
+net\pascal\terminal\component\TFullTextArea.class
 net\pascal\terminal\util\AsciiCodeUtil.class
 net\pascal\terminal\component\ScrollbarBuilder.class
 net\pascal\terminal\text\ForegroundColor.class

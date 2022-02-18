@@ -60,24 +60,11 @@ public class Main {
             }
         });
 
-        TProgressBar b = new TProgressBar(32);
-        label.setBackgroundColor(BackgroundColor.RED);
-        screen.addComponent(label, new TVector(4, 4));
-        screen.addComponent(b1, new TVector(30, 6));
-        screen.addComponent(new TCheckBox("Enabled"), new TVector(30, 9));
-        screen.addComponent(b, new TVector(4, 18));
-        rl.setDockingPoint(label, DockType.LEFT);
-        rl.setDockingPoint(b1, DockType.TOP);
-        //rl.setDockingPoint(filledRect, DockType.BOTTOM);
+        TFullTextArea textArea = new TFullTextArea(new TVector(50, 8));
+        textArea.setForegroundColor(ForegroundColor.BLACK);
+        textArea.setBackgroundColor(BackgroundColor.WHITE);
+        screen.addComponent(textArea, new TVector(3, 3));
         application.openScreen(screen);
-        int i = 0;
-        while (true) {
-            Thread.sleep(100L);
-            label.setText("R: " + Math.random() + "\n" + "R2: " + Math.random() + "\n\n" + "R3: " + Math.random());
-            b.setValue(b.getValue()+5);
-            i++;
-            if(i == 5) break;
-        }
     }
 
 }

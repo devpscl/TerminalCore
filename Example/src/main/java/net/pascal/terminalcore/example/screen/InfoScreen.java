@@ -75,10 +75,10 @@ public class InfoScreen extends TerminalScreen {
         String textAreaInfo = "In the text area a long text\nwith line break can be stored.\nThe component supports\n" +
                 "the left/right/up/down movement of the text\ncursor and a scrollbar for the lines.";
         TLabel textAreaInfoLabel = new TLabel(textAreaInfo);
-        TTextArea textArea = new TTextArea(textAreaInfoLabel.getAbsoluteSize().x, 8);
+        TFullTextArea textArea = new TFullTextArea(new TVector(textAreaInfoLabel.getAbsoluteSize().x, 8));
         textArea.setForegroundColor(ForegroundColor.BLACK);
         textArea.setBackgroundColor(BackgroundColor.WHITE);
-        textArea.setSelectColors(ForegroundColor.WHITE, BackgroundColor.BLACK_BRIGHT);
+        //textArea.setSelectColors(ForegroundColor.WHITE, BackgroundColor.BLACK_BRIGHT);
         textAreaInfoContainer.addComponent(textAreaInfoLabel, corner);
         textAreaInfoContainer.addComponent(textArea, corner.clone().addHeight(textAreaInfoLabel.getAbsoluteSize().y + 2));
 

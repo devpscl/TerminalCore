@@ -17,12 +17,18 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * The type Terminal application.
+ */
 public class TerminalApplication {
 
+    /**
+     * The constant application.
+     */
     public static TerminalApplication application;
 
     private final Terminal terminal;
-    private TVector cachedTerminalSize;
+    private static TVector cachedTerminalSize;
 
     private Thread keyWorkerThread;
     private ScheduledFuture<?> sizeControllerScheduler;
@@ -35,6 +41,11 @@ public class TerminalApplication {
     private ResizeEventHandler resizeEventHandler;
 
 
+    /**
+     * Instantiates a new Terminal application.
+     *
+     * @param terminal the terminal
+     */
     public TerminalApplication(Terminal terminal) {
         if(terminal == null) throw new NullPointerException("Terminal is null");
         this.terminal = terminal;
@@ -44,7 +55,7 @@ public class TerminalApplication {
         application = this;
         this.keyEventHandlers = new ArrayList<>();
         this.executorService = Executors.newScheduledThreadPool(1);
-        this.cachedTerminalSize = terminal.getSize();
+        cachedTerminalSize = terminal.getSize();
         init();
     }
 
@@ -84,6 +95,9 @@ public class TerminalApplication {
         }, 100, 500, TimeUnit.MILLISECONDS);
     }
 
+    /**
+     * Reset display to clear screen and default colors.
+     */
     public void resetDisplay() {
         terminal.setColor(ForegroundColor.WHITE, BackgroundColor.BLACK);
         try {
@@ -93,14 +107,31 @@ public class TerminalApplication {
         }
     }
 
+    /**
+     * Sets resize event handler.
+     * this works is only used by the screen and when a new screen is opened a new ResizeHandler is added.
+     * But only one can run.
+     *
+     * @param resizeEventHandler the resize event handler
+     */
     public void setResizeEventHandler(ResizeEventHandler resizeEventHandler) {
         this.resizeEventHandler = resizeEventHandler;
     }
 
+    /**
+     * Gets current screen.
+     *
+     * @return the current screen
+     */
     public TerminalScreen getCurrentScreen() {
         return currentScreen;
     }
 
+    /**
+     * Open screen.
+     *
+     * @param screen the screen
+     */
     public void openScreen(TerminalScreen screen) {
         if(screen == null) {
             closeScreen();
@@ -113,6 +144,10 @@ public class TerminalApplication {
         this.currentScreen.open();
     }
 
+    /**
+     * Close screen.
+     *
+     */
     public void closeScreen() {
         if(this.currentScreen == null) {
             throw new TerminalException("No screen is running!");
@@ -124,6 +159,11 @@ public class TerminalApplication {
         terminal.setCursorVisible(true);
     }
 
+    /**
+     * Switch screen.
+     *
+     * @param screen the screen
+     */
     public void switchScreen(TerminalScreen screen) {
         if(screen == null) {
             closeScreen();
@@ -139,10 +179,18 @@ public class TerminalApplication {
         oldScreen.close();
     }
 
+    /**
+     * Is screen open.
+     *
+     * @return the boolean
+     */
     public boolean isScreenOpen() {
         return currentScreen != null;
     }
 
+    /**
+     * Dispose application.
+     */
     public void dispose() {
         sizeControllerScheduler.cancel(true);
         keyWorkerThread.stop();
@@ -152,18 +200,38 @@ public class TerminalApplication {
         application = null;
     }
 
+    /**
+     * Gets terminal instance.
+     *
+     * @return the terminal
+     */
     public Terminal getTerminal() {
         return terminal;
     }
 
-    public TVector getCachedTerminalSize() {
+    /**
+     * Gets cached terminal size.
+     *
+     * @return the cached terminal size
+     */
+    public static TVector getCachedTerminalSize() {
         return cachedTerminalSize.c();
     }
 
+    /**
+     * Add key listener.
+     *
+     * @param eventHandler the event handler
+     */
     public void addKeyListener(KeyEventHandler eventHandler) {
         this.keyEventHandlers.add(eventHandler);
     }
 
+    /**
+     * Remove key listener.
+     *
+     * @param eventHandler the event handler
+     */
     public void removeKeyListener(KeyEventHandler eventHandler) {
         this.keyEventHandlers.remove(eventHandler);
     }

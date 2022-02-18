@@ -299,6 +299,11 @@ public class Terminal {
     public KeyInput readInput() {
         int ch = getch();
         char c = (char) ch;
+        return parseInput(c);
+    }
+
+    private KeyInput parseInput(char c) {
+        int ch = (int)c;
         if(OperationSystemUtil.isWindows()) {
             if(ch == 9) {
                 return new ControlKeyInput(c, ControlKeyType.TAB);

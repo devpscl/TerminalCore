@@ -183,6 +183,7 @@ public class LineTextBuffer {
     public void pointerRemoveLine() {
         int line = currentLine;
         int pos = currentPointer;
+        int lng = getLineLength(line-1);
         String content = getLine(line);
         if(content == null) return;
         if(lineBufferLength != -1) {
@@ -191,6 +192,8 @@ public class LineTextBuffer {
                 String s = content.substring(0, free);
                 setLine(line, content.substring(free));
                 setLine(line-1, getLine(line-1) + s);
+                currentLine--;
+                currentPointer = lng;
                 return;
             }
         }
@@ -198,7 +201,7 @@ public class LineTextBuffer {
         removeLine(line);
         setLine(line-1, getLine(line-1) + content);
         currentLine--;
-        currentPointer = getLineLength(currentLine);
+        currentPointer = lng;
     }
 
     public String convertToString(char[] chars) {

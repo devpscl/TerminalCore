@@ -7,6 +7,10 @@ import net.pascal.terminal.key.KeyInput;
 import net.pascal.terminal.util.Cancellable;
 import net.pascal.terminal.util.TVector;
 
+/**
+ * The type Terminal progress bar.
+ * Stretchable: no
+ */
 public class TProgressBar extends TComponent{
 
     private int value;
@@ -15,6 +19,11 @@ public class TProgressBar extends TComponent{
     private String obtainedSymbol;
     private String freeSymbol;
 
+    /**
+     * Instantiates a new Terminal progress bar.
+     *
+     * @param length the length
+     */
     public TProgressBar(int length) {
         super(new TVector(length + 2, 1));
         value = 0;
@@ -22,34 +31,74 @@ public class TProgressBar extends TComponent{
         freeSymbol = "-";
     }
 
+    /**
+     * Gets free symbol.
+     *
+     * @return the free symbol
+     */
     public String getFreeSymbol() {
         return freeSymbol;
     }
 
+    /**
+     * Gets obtained symbol.
+     *
+     * @return the obtained symbol
+     */
     public String getObtainedSymbol() {
         return obtainedSymbol;
     }
 
+    /**
+     * Sets free symbol.
+     *
+     * @param freeSymbol the free symbol
+     */
     public void setFreeSymbol(String freeSymbol) {
         this.freeSymbol = freeSymbol;
     }
 
+    /**
+     * Sets obtained symbol.
+     *
+     * @param obtainedSymbol the obtained symbol
+     */
     public void setObtainedSymbol(String obtainedSymbol) {
         this.obtainedSymbol = obtainedSymbol;
     }
 
+    /**
+     * Gets length.
+     *
+     * @return the length
+     */
     public int getLength() {
         return getSize().getWidth()-2;
     }
 
+    /**
+     * Gets total length.
+     *
+     * @return the total length
+     */
     public int getTotalLength() {
         return getSize().getWidth();
     }
 
+    /**
+     * Gets value.
+     *
+     * @return the value
+     */
     public int getValue() {
         return value;
     }
 
+    /**
+     * Sets value 0-100.
+     *
+     * @param value the value
+     */
     public void setValue(int value) {
         this.value = value;
         if(this.value < 0) this.value = 0;

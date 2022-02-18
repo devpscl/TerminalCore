@@ -13,6 +13,10 @@ import net.pascal.terminal.util.Cancellable;
 import net.pascal.terminal.util.TVector;
 import net.pascal.terminal.util.event.KeyEventHandler;
 
+/**
+ * The type Terminal text field.
+ * Stretchable: no
+ */
 public class TTextField extends TComponent {
 
     private char[] chars;
@@ -20,6 +24,11 @@ public class TTextField extends TComponent {
     private boolean selected;
     private Color[] selectColors;
 
+    /**
+     * Instantiates a new Terminal text field.
+     *
+     * @param length the maximum length
+     */
     public TTextField(int length) {
         super(new TVector(length, 1));
         this.chars = new char[length];
@@ -29,14 +38,32 @@ public class TTextField extends TComponent {
         selectColors = new Color[]{ForegroundColor.BLACK, BackgroundColor.RGB_GREEN};
     }
 
+    /**
+     * Sets select colors.
+     * the cursor colors
+     *
+     * @param selectColors the select colors
+     */
     public void setSelectColors(Color...selectColors) {
         this.selectColors = selectColors;
     }
 
+    /**
+     * Get select colors color [...].
+     * the cursor colors
+     *
+     * @return the color [...]
+     */
     public Color[] getSelectColors() {
         return selectColors;
     }
 
+    /**
+     * Instantiates a new Terminal text field with text.
+     *
+     * @param length the maximum length
+     * @param text   the text
+     */
     public TTextField(int length, String text) {
         super(new TVector(length, 1));
         this.chars = new char[length];
@@ -47,10 +74,16 @@ public class TTextField extends TComponent {
         for(int i = 0;i<chars.length;i++) {
             if(tc.length > i) {
                 chars[i] = tc[i];
+                pointer++;
             } else chars[i] = '\u0000';
         }
     }
 
+    /**
+     * Gets text.
+     *
+     * @return the text
+     */
     public String getText() {
         StringBuilder sb = new StringBuilder();
         for (char c : chars) {
@@ -92,12 +125,23 @@ public class TTextField extends TComponent {
         return false;
     }
 
+    /**
+     * Gets length size.
+     *
+     * @return the character size
+     */
     public int getCharacterSize() {
         for(int i = 0;i<chars.length;i++) {
             if(chars[i] == '\u0000') return i;
         }
         return chars.length-1;
     }
+
+    /**
+     * Is pointer at last.
+     *
+     * @return the boolean
+     */
     public boolean isPointerAtLast() {
         for(int i = pointer;i<chars.length;i++) {
             if(chars[i] != '\u0000') return false;

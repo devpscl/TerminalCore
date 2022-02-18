@@ -10,12 +10,21 @@ import net.pascal.terminal.text.TextDecoration;
 import net.pascal.terminal.util.Cancellable;
 import net.pascal.terminal.util.TVector;
 
+/**
+ * The type Terminal check box.
+ * Stretchable: no
+ */
 public class TCheckBox extends TComponent {
 
     private final String text;
     private boolean checked;
     private boolean selected;
 
+    /**
+     * Instantiates a new Terminal check box.
+     *
+     * @param text the text
+     */
     public TCheckBox(String text) {
         super(new TVector(text.length()+4, 1));
         this.text = text;
@@ -24,10 +33,20 @@ public class TCheckBox extends TComponent {
         setSelectable(true);
     }
 
+    /**
+     * Gets state of box (is checked).
+     *
+     * @return the state
+     */
     public boolean getState() {
         return checked;
     }
 
+    /**
+     * Sets state of box.
+     *
+     * @param b the b
+     */
     public void setState(boolean b) {
         checked = b;
         if(isDisplaying()) {
@@ -44,6 +63,11 @@ public class TCheckBox extends TComponent {
         }
     }
 
+    /**
+     * Gets text of checkbox.
+     *
+     * @return the text
+     */
     public String getText() {
         return text;
     }

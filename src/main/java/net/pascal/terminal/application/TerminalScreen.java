@@ -18,6 +18,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * The type Terminal screen.
+ */
 @DisplayDriver
 public class TerminalScreen {
 
@@ -37,6 +40,14 @@ public class TerminalScreen {
     private TComponent selectedComponent;
 
 
+    /**
+     * Instantiates a new Terminal screen.
+     * the screen must be opened in TerminalApplication
+     * 
+     * @see TerminalApplication#openScreen(TerminalScreen) 
+     *
+     * @param application the application
+     */
     public TerminalScreen(TerminalApplication application) {
         if(application == null) throw new NullPointerException("Terminalapplication is null");
         this.terminal = application.getTerminal();
@@ -55,6 +66,12 @@ public class TerminalScreen {
         layout = new AbsoluteLayout();
     }
 
+    /**
+     * Sets layout.
+     * A layout can influence the resizing and position in the screen
+     *
+     * @param layout the layout
+     */
     public void setLayout(TLayout layout) {
         if(layout == null) {
             this.layout = new AbsoluteLayout();
@@ -62,6 +79,12 @@ public class TerminalScreen {
         this.layout = layout;
     }
 
+    /**
+     * Add component.
+     *
+     * @param c      the component
+     * @param vector the vector
+     */
     public void addComponent(TComponent c, TVector vector) {
         TDisplayDrawer drawer = new TDisplayDrawer(c, vector, this);
         components.put(c, drawer);
@@ -73,6 +96,11 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Remove component.
+     *
+     * @param c the component
+     */
     public void removeComponent(TComponent c) {
         if(displayed) layout.remove(c, this, getDrawer(c));
         components.remove(c);
@@ -87,6 +115,12 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Update component.
+     * the component will be redraw on display.
+     *
+     * @param component the component
+     */
     public void updateComponent(TComponent component) {
         if(!displayed) return;
         boolean sel = selectedComponent == component;
@@ -99,14 +133,31 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Gets components in screen.
+     *
+     * @return the component set
+     */
     public Set<TComponent> getComponents() {
         return components.keySet();
     }
 
+    /**
+     * Gets drawer.
+     *
+     * @param component the component
+     * @return the drawer
+     */
     public TDisplayDrawer getDrawer(TComponent component) {
         return components.get(component);
     }
 
+    /**
+     * Update drawer.
+     *
+     * @param component the component
+     * @param drawer    the drawer
+     */
     public void updateDrawer(TComponent component, TDisplayDrawer drawer) {
         components.put(component, drawer);
     }
@@ -182,10 +233,19 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Gets selected component.
+     *
+     * @return the selected component
+     */
     public TComponent getSelectedComponent() {
         return selectedComponent;
     }
 
+    /**
+     * Display components.
+     * screen will be cleared and components will be painted
+     */
     public void display() {
         if(displayed) {
             layout.display(this);
@@ -194,6 +254,10 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Open screen.
+     * This method is not to be used since it is addressed only once
+     */
     protected void open() {
         displayed = true;
         terminal.setCursorVisible(false);
@@ -213,12 +277,20 @@ public class TerminalScreen {
         layout.load(this);
     }
 
+    /**
+     * Preclose action.
+     * This method is not to be used since it is addressed only once
+     */
     protected void preClose() {
         selectComponent(null);
         layout.unload(this);
         application.setResizeEventHandler(null);
     }
 
+    /**
+     * Close action.
+     * This method is not to be used since it is addressed only once
+     */
     protected void close() {
         for(KeyEventHandler h : keyEventHandlers) {
             application.removeKeyListener(h);
@@ -231,18 +303,38 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Gets current layout.
+     *
+     * @return the layout
+     */
     public TLayout getLayout() {
         return layout;
     }
 
+    /**
+     * Gets background color.
+     *
+     * @return the background color
+     */
     public BackgroundColor getBackgroundColor() {
         return backgroundColor;
     }
 
+    /**
+     * Gets foreground color.
+     *
+     * @return the foreground color
+     */
     public ForegroundColor getForegroundColor() {
         return foregroundColor;
     }
 
+    /**
+     * Sets background color.
+     *
+     * @param backgroundColor the background color
+     */
     public void setBackgroundColor(BackgroundColor backgroundColor) {
         this.backgroundColor = backgroundColor;
         if(displayed) {
@@ -250,6 +342,11 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Sets foreground color.
+     *
+     * @param foregroundColor the foreground color
+     */
     public void setForegroundColor(ForegroundColor foregroundColor) {
         this.foregroundColor = foregroundColor;
         if(displayed) {
@@ -257,20 +354,40 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Is displayed boolean.
+     *
+     * @return the boolean
+     */
     public boolean isDisplayed() {
         return displayed;
     }
 
+    /**
+     * Add key listener.
+     *
+     * @param eventHandler the event handler
+     */
     public void addKeyListener(KeyEventHandler eventHandler) {
         this.keyEventHandlers.add(eventHandler);
         application.addKeyListener(eventHandler);
     }
 
+    /**
+     * Remove key listener.
+     *
+     * @param eventHandler the event handler
+     */
     public void removeKeyListener(KeyEventHandler eventHandler) {
         this.keyEventHandlers.remove(eventHandler);
         application.removeKeyListener(eventHandler);
     }
 
+    /**
+     * Select component.
+     *
+     * @param component the component
+     */
     public void selectComponent(TComponent component) {
         if(selectedComponent != null) {
             layout.deselect(selectedComponent, this, getDrawer(selectedComponent));
@@ -283,6 +400,12 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Has component.
+     *
+     * @param component the component
+     * @return the boolean
+     */
     public boolean hasComponent(TComponent component) {
         return this.components.containsKey(component);
     }
@@ -334,6 +457,12 @@ public class TerminalScreen {
         return new TVector[][]{hVectors, vVectors, corners};
     }
 
+    /**
+     * Sets frame.
+     * This frame is displayed in the screen at the edge and frames the screen.
+     *
+     * @param title the title with default frame
+     */
     public void setFrame(String title) {
         screenFrame = new ScreenFrame('┌', '┐', '└'
                 , '┘', '─', '│', title);
@@ -342,6 +471,12 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Sets frame.
+     * This frame is displayed in the screen at the edge and frames the screen.
+     *
+     * @param frame the customized frame
+     */
     public void setFrame(ScreenFrame frame) {
         screenFrame = frame;
         if(displayed) {
@@ -349,6 +484,11 @@ public class TerminalScreen {
         }
     }
 
+    /**
+     * Gets application.
+     *
+     * @return the application
+     */
     public TerminalApplication getApplication() {
         return application;
     }

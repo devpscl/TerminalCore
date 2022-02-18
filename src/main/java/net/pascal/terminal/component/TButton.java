@@ -11,6 +11,10 @@ import net.pascal.terminal.text.ForegroundColor;
 import net.pascal.terminal.util.Cancellable;
 import net.pascal.terminal.util.TVector;
 
+/**
+ * The type Terminal button.
+ * Stretchable: no
+ */
 public class TButton extends TComponent {
 
     private String name;
@@ -19,7 +23,11 @@ public class TButton extends TComponent {
     private Color[] selectColors;
 
 
-
+    /**
+     * Instantiates a new Terminal button.
+     *
+     * @param buttonName the button name
+     */
     public TButton(String buttonName) {
         super(new TVector((buttonName.replaceAll("\n", "").length()+2), 1));
         this.name = buttonName.replaceAll("\n", "");
@@ -29,10 +37,20 @@ public class TButton extends TComponent {
         setSelectable(true);
     }
 
+    /**
+     * Sets colors on select
+     *
+     * @param selectColors the select colors
+     */
     public void setSelectColors(Color... selectColors) {
         this.selectColors = selectColors;
     }
 
+    /**
+     * Gets name of button.
+     *
+     * @return the name
+     */
     public String getName() {
         return name;
     }
@@ -75,6 +93,11 @@ public class TButton extends TComponent {
         }
     }
 
+    /**
+     * Sets click event.
+     *
+     * @param runnable the runnable
+     */
     public void setClickEvent(Runnable runnable) {
         this.runnable = runnable;
     }
