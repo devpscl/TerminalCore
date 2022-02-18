@@ -12,6 +12,8 @@ Terminal GUI library for Windows/Linux.
 
 This library contains all colors as ascii codes, native functions of the respective operating systems, cursor movement and simplified terminal functions.
 
+Documentation: https://apicodeyt.github.io/TerminalCore/
+
 ![Sample app](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/2022-02-17-13-19-42.gif)
 
 
