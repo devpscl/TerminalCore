@@ -16,7 +16,19 @@ This library contains all colors as ascii codes, native functions of the respect
 
 ![Sample app](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/2022-02-17-13-19-42.gif)
 
+Documentation: https://apicodeyt.github.io/TerminalCore/
 
+### Maven Dependency
+```xml
+<dependency>
+    <groupId>net.pascal</groupId>
+    <artifactId>terminalcore</artifactId>
+    <version>VERSION</version>
+</dependency>
+
+```
+
+This library includes a color system, as well as cursor handling and more.
 
 ### Example (Simple Terminal - No Screen)
 ```java
@@ -86,15 +98,7 @@ application.openScreen(screen); //open screen
 ### 8-Bit Colorlist
 ![Colors](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/8bit-colors.jpg)
 
-### Maven Dependency
-```xml
-<dependency>
-    <groupId>net.pascal</groupId>
-    <artifactId>terminalcore</artifactId>
-    <version>VERSION</version>
-</dependency>
 
-```
 
 
 
