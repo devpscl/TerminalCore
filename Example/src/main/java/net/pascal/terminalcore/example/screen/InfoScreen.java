@@ -18,10 +18,7 @@ import net.pascal.terminalcore.example.paint.InfoBoxPaint;
 import net.pascal.terminalcore.example.util.ApplicationUtil;
 import net.pascal.terminalcore.example.util.ScreenContainer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
+import java.util.*;
 
 public class InfoScreen extends TerminalScreen {
 
@@ -75,10 +72,10 @@ public class InfoScreen extends TerminalScreen {
         String textAreaInfo = "In the text area a long text\nwith line break can be stored.\nThe component supports\n" +
                 "the left/right/up/down movement of the text\ncursor and a scrollbar for the lines.";
         TLabel textAreaInfoLabel = new TLabel(textAreaInfo);
-        TFullTextArea textArea = new TFullTextArea(new TVector(textAreaInfoLabel.getAbsoluteSize().x, 8));
+        TTextArea textArea = new TTextArea(textAreaInfoLabel.getAbsoluteSize().x, 8);
         textArea.setForegroundColor(ForegroundColor.BLACK);
         textArea.setBackgroundColor(BackgroundColor.WHITE);
-        //textArea.setSelectColors(ForegroundColor.WHITE, BackgroundColor.BLACK_BRIGHT);
+        textArea.setSelectColors(ForegroundColor.WHITE, BackgroundColor.BLACK_BRIGHT);
         textAreaInfoContainer.addComponent(textAreaInfoLabel, corner);
         textAreaInfoContainer.addComponent(textArea, corner.clone().addHeight(textAreaInfoLabel.getAbsoluteSize().y + 2));
 
@@ -98,16 +95,41 @@ public class InfoScreen extends TerminalScreen {
         progressBarInfoContainer.addComponent(progressBarInfoLabel, corner);
         progressBarInfoContainer.addComponent(progressBar, corner.clone().addHeight(progressBarInfoLabel.getAbsoluteSize().y + 2));
 
+        ScreenContainer textFullAreaInfoContainer = new ScreenContainer(this);
+        String textFullAreaInfo = "In the full text area a long text\nwith line break and infinity line length can be stored.\nThe component supports\n" +
+                "the left/right/up/down movement of the text\ncursor and a scrollbar for the lines and position on line.";
+        TLabel textFullAreaInfoLabel = new TLabel(textFullAreaInfo);
+        TFullTextArea textFullArea = new TFullTextArea(new TVector(textFullAreaInfoLabel.getAbsoluteSize().x, 8));
+        textFullArea.setForegroundColor(ForegroundColor.BLACK);
+        textFullArea.setBackgroundColor(BackgroundColor.WHITE);
+        textFullArea.setSelectColors(ForegroundColor.WHITE, BackgroundColor.BLACK_BRIGHT);
+        textFullAreaInfoContainer.addComponent(textFullAreaInfoLabel, corner);
+        textFullAreaInfoContainer.addComponent(textFullArea, corner.clone().addHeight(textFullAreaInfoLabel.getAbsoluteSize().y + 2));
+
+        ScreenContainer listSelectBoxInfoContainer = new ScreenContainer(this);
+        String listSelectBoxInfo = "In a List select box elements can be stored\nand one of them can be selected by Enter!";
+        TLabel listSelectBoxInfoLabel = new TLabel(listSelectBoxInfo);
+        List<String> elements = Arrays.asList("Apple", "Orange", "Avocado", "Banana", "Pear", "Strawberry", "Cherry"
+                , "Kiwi", "Mango", "Melon", "Lemon", "Pineapple");
+        TListSelectBox listSelectBox = new TListSelectBox(new TVector(listSelectBoxInfoLabel.getAbsoluteSize().x, 8), elements);
+        listSelectBox.setForegroundColor(ForegroundColor.BLACK);
+        listSelectBox.setBackgroundColor(BackgroundColor.WHITE);
+        listSelectBox.setPointedColor(ForegroundColor.WHITE, BackgroundColor.BLACK_BRIGHT);
+        listSelectBoxInfoContainer.addComponent(listSelectBoxInfoLabel, corner);
+        listSelectBoxInfoContainer.addComponent(listSelectBox, corner.clone().addHeight(listSelectBoxInfoLabel.getAbsoluteSize().y + 2));
+
         containerHashMap.put("TextField", textFieldInfoContainer);
         containerHashMap.put("TextArea", textAreaInfoContainer);
         containerHashMap.put("CheckBox", checkboxInfoContainer);
         containerHashMap.put("ProgressBar", progressBarInfoContainer);
+        containerHashMap.put("FullTextArea", textFullAreaInfoContainer);
+        containerHashMap.put("ListSelectBox", listSelectBoxInfoContainer);
         currentContainer = textFieldInfoContainer;
         currentContainer.set();
     }
 
     private void initialize() {
-        infoBoxPaint = new InfoBoxPaint(new TVector(getApplication().getCachedTerminalSize().x, 1));
+        infoBoxPaint = new InfoBoxPaint(new TVector(TerminalApplication.getCachedTerminalSize().x, 1));
         infoBoxPaint.setForegroundColor(ForegroundColor.BLACK);
         infoBoxPaint.setBackgroundColor(BackgroundColor.WHITE);
 

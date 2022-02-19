@@ -5,6 +5,9 @@ import net.pascal.terminal.application.TerminalScreen;
 import net.pascal.terminal.key.ControlKeyInput;
 import net.pascal.terminal.key.ControlKeyType;
 import net.pascal.terminal.key.KeyInput;
+import net.pascal.terminal.text.BackgroundColor;
+import net.pascal.terminal.text.Color;
+import net.pascal.terminal.text.ForegroundColor;
 import net.pascal.terminal.text.TextDecoration;
 import net.pascal.terminal.util.Cancellable;
 import net.pascal.terminal.util.TVector;
@@ -14,15 +17,48 @@ public class TPasswordField extends TComponent {
     private char[] chars;
     private int pointer;
     private boolean selected;
+    private Color[] selectColors;
 
+    /**
+     * Instantiates a new Terminal password field.
+     *
+     * @param length the maximum length
+     */
     public TPasswordField(int length) {
         super(new TVector(length, 1));
         this.chars = new char[length];
         pointer = 0;
         setSelectable(true);
         selected = false;
+        selectColors = new Color[]{ForegroundColor.BLACK, BackgroundColor.RGB_GREEN};
     }
 
+    /**
+     * Sets select colors.
+     * the cursor colors
+     *
+     * @param selectColors the select colors
+     */
+    public void setSelectColors(Color...selectColors) {
+        this.selectColors = selectColors;
+    }
+
+    /**
+     * Get select colors color [...].
+     * the cursor colors
+     *
+     * @return the color [...]
+     */
+    public Color[] getSelectColors() {
+        return selectColors;
+    }
+
+    /**
+     * Instantiates a new Terminal password field with text.
+     *
+     * @param length the maximum length
+     * @param text   the text
+     */
     public TPasswordField(int length, String text) {
         super(new TVector(length, 1));
         this.chars = new char[length];
@@ -33,10 +69,16 @@ public class TPasswordField extends TComponent {
         for(int i = 0;i<chars.length;i++) {
             if(tc.length > i) {
                 chars[i] = tc[i];
+                pointer++;
             } else chars[i] = '\u0000';
         }
     }
 
+    /**
+     * Gets text.
+     *
+     * @return the text
+     */
     public String getPassword() {
         StringBuilder sb = new StringBuilder();
         for (char c : chars) {
@@ -78,12 +120,23 @@ public class TPasswordField extends TComponent {
         return false;
     }
 
+    /**
+     * Gets length size.
+     *
+     * @return the character size
+     */
     public int getCharacterSize() {
         for(int i = 0;i<chars.length;i++) {
             if(chars[i] == '\u0000') return i;
         }
         return chars.length-1;
     }
+
+    /**
+     * Is pointer at last.
+     *
+     * @return the boolean
+     */
     public boolean isPointerAtLast() {
         for(int i = pointer;i<chars.length;i++) {
             if(chars[i] != '\u0000') return false;
@@ -95,10 +148,20 @@ public class TPasswordField extends TComponent {
     @Override
     public void draw(TDisplayDrawer drawer, TerminalScreen screen) {
         StringBuilder sb = new StringBuilder();
-        for (char aChar : chars) {
-            char c = aChar;
+        for (int i = 0;i<chars.length;i++) {
+            char c = chars[i];
+            boolean pointed = selected && pointer == i;
             if (c == '\u0000') c = ' ';
             else c = '*';
+            if(pointed) {
+                for(Color sc : selectColors) {
+                    sb.append(sc.getAsciiCode());
+                }
+                sb.append(c);
+                sb.append(TextDecoration.RESET.getAsciiCode()).append(getForegroundColor().getAsciiCode()).append(getBackgroundColor().getAsciiCode());
+                sb.append(TextDecoration.UNDERLINE);
+                continue;
+            }
             sb.append(c);
         }
         drawer.point();
@@ -113,7 +176,7 @@ public class TPasswordField extends TComponent {
 
     @Override
     public void select(TDisplayDrawer drawer, TerminalScreen screen) {
-        screen.getApplication().getTerminal().setCursorVisible(true);
+        //screen.getApplication().getTerminal().setCursorVisible(true);
         drawer.point(drawer.getCurrentPosition().clone().addWidth(pointer));
         drawer.saveCursorPosition();
 
@@ -125,7 +188,7 @@ public class TPasswordField extends TComponent {
 
     @Override
     public void deselect(TDisplayDrawer drawer, TerminalScreen screen) {
-        screen.getApplication().getTerminal().setCursorVisible(false);
+        //screen.getApplication().getTerminal().setCursorVisible(false);
         selected = false;
         draw(drawer, screen);
     }
@@ -155,6 +218,7 @@ public class TPasswordField extends TComponent {
                 }
             } else if(type == ControlKeyType.ARROW_LEFT) {
                 if(movePointerLeft()) {
+                    draw(drawer, screen);
                     drawer.point(drawer.getCurrentPosition().clone().addWidth(pointer));
                     drawer.saveCursorPosition();
                 }
@@ -163,6 +227,7 @@ public class TPasswordField extends TComponent {
                 }
             } else if(type == ControlKeyType.ARROW_RIGHT) {
                 if(movePointerRight()) {
+                    draw(drawer, screen);
                     drawer.point(drawer.getCurrentPosition().clone().addWidth(pointer));
                     drawer.saveCursorPosition();
                 }

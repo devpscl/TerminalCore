@@ -69,11 +69,13 @@ public class LoginScreen extends TerminalScreen {
         nameField.setBackgroundColor(BackgroundColor.WHITE);
         nameField.setForegroundColor(ForegroundColor.BLACK);
         nameField.setPositionFixed(true);
+        nameField.setSelectColors(ForegroundColor.WHITE, BackgroundColor.BLACK_BRIGHT);
 
         passwordField = new TPasswordField(32);
         passwordField.setBackgroundColor(BackgroundColor.WHITE);
         passwordField.setForegroundColor(ForegroundColor.BLACK);
         passwordField.setPositionFixed(true);
+        passwordField.setSelectColors(ForegroundColor.WHITE, BackgroundColor.BLACK_BRIGHT);
 
         infoLabel = new TLabel("This is a simple login view as screen.\n" +
                 "The loginname is abc and the secret\n" +

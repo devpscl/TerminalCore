@@ -6,7 +6,7 @@
 
     <groupId>net.pascal</groupId>
     <artifactId>terminalcore</artifactId>
-    <version>0.2.3</version>
+    <version>0.3.0</version>
     <packaging>jar</packaging>
 
     <properties>

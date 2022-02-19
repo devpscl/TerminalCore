@@ -45,6 +45,7 @@ net\pascal\terminal\component\TTextField.class
 net\pascal\terminal\application\TDisplayDrawer$1.class
 net\pascal\terminal\Terminal$1.class
 net\pascal\terminal\util\event\KeyEventHandler.class
+net\pascal\terminal\component\TEditor.class
 net\pascal\terminal\layout\AbsoluteLayout$3.class
 net\pascal\terminal\text\TextDecoration.class
 net\pascal\terminal\layout\RelativeLayout$3.class

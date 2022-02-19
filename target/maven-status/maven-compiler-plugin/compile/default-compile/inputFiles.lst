@@ -23,6 +23,7 @@ C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\termin
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\component\TListBox.java
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\util\TMath.java
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\application\TDisplayDrawer.java
+C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\component\TEditor.java
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\component\TCheckBox.java
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\util\RenderVectorHandler.java
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\TerminalHandle.java
@@ -42,5 +43,6 @@ C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\termin
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\util\event\KeyEventHandler.java
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\text\TextDecoration.java
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\component\TLabel.java
+C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\component\TFullTextArea.java
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\component\TTextField.java
 C:\Users\blog-\Desktop\TerminalCore\TerminalCore\src\main\java\net\pascal\terminal\util\event\ResizeEventHandler.java

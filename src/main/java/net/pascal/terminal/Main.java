@@ -60,7 +60,7 @@ public class Main {
             }
         });
 
-        TFullTextArea textArea = new TFullTextArea(new TVector(50, 8));
+        TEditor textArea = new TEditor(new TVector(50, 8));
         textArea.setForegroundColor(ForegroundColor.BLACK);
         textArea.setBackgroundColor(BackgroundColor.WHITE);
         screen.addComponent(textArea, new TVector(3, 3));
