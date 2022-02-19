@@ -18,7 +18,7 @@ This library contains all colors as ascii codes, native functions of the respect
 
 
 
-### Example (Simple Terminal)
+### Example (Simple Terminal - No Screen)
 ```java
 
 Terminal t = new Terminal();
