@@ -14,7 +14,7 @@ This library contains all colors as ascii codes, native functions of the respect
 
 
 
-![Sample app](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/2022-02-17-13-19-42.gif)
+![Sample app](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/preview.gif)
 
 Documentation: https://apicodeyt.github.io/TerminalCore/
 
