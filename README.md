@@ -1,7 +1,7 @@
 <div align="center">
 <br/>
   <p>
-    <img src="https://img.shields.io/static/v1?label=Version&message=Alpha-0.2.2&color=12c970&logoColor=white" alt="Version" />
+    <img src="https://img.shields.io/static/v1?label=Version&message=Alpha-0.3.0&color=12c970&logoColor=white" alt="Version" />
 	<br>
 	</p>
   </p>
@@ -14,7 +14,7 @@ This library contains all colors as ascii codes, native functions of the respect
 
 
 
-![Sample app](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/2022-02-17-13-19-42.gif)
+![Sample app](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/preview.gif)
 
 Documentation: https://apicodeyt.github.io/TerminalCore/
 
@@ -23,7 +23,7 @@ Documentation: https://apicodeyt.github.io/TerminalCore/
 <dependency>
     <groupId>net.pascal</groupId>
     <artifactId>terminalcore</artifactId>
-    <version>VERSION</version>
+    <version>0.3.0</version>
 </dependency>
 
 ```
