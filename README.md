@@ -10,13 +10,27 @@
 # TerminalCore
 Terminal GUI library for Windows/Linux.
 
-This library contains all colors as ascii codes, native functions of the respective operating systems, cursor movement and simplified terminal functions.
+This library contains all colors as ascii codes, native functions of the respective operating systems, gui toolkit and simplified terminal functions.
+
+
 
 ![Sample app](https://github.com/APICodeYT/TerminalCore/blob/main/ressource-assets/2022-02-17-13-19-42.gif)
 
+Documentation: https://apicodeyt.github.io/TerminalCore/
 
+### Maven Dependency
+```xml
+<dependency>
+    <groupId>net.pascal</groupId>
+    <artifactId>terminalcore</artifactId>
+    <version>VERSION</version>
+</dependency>
 
-### Example (Simple Terminal)
+```
+
+This library includes a color system, as well as cursor handling and more.
+
+### Example (Simple Terminal - No Screen)
 ```java
 
 Terminal t = new Terminal();
