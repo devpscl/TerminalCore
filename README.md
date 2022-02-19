@@ -23,7 +23,7 @@ Documentation: https://apicodeyt.github.io/TerminalCore/
 <dependency>
     <groupId>net.pascal</groupId>
     <artifactId>terminalcore</artifactId>
-    <version>VERSION</version>
+    <version>0.3.0</version>
 </dependency>
 
 ```
