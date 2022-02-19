@@ -61,7 +61,7 @@ public class LoginScreen extends TerminalScreen {
     }
 
     private void initialize() {
-        infoBoxPaint = new InfoBoxPaint(new TVector(application.getCachedTerminalSize().x, 1));
+        infoBoxPaint = new InfoBoxPaint(new TVector(TerminalApplication.getCachedTerminalSize().x, 1));
         infoBoxPaint.setForegroundColor(ForegroundColor.BLACK);
         infoBoxPaint.setBackgroundColor(BackgroundColor.WHITE);
 

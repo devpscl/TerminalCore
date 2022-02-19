@@ -7,3 +7,7 @@ net.pascal.terminal.layout
 net.pascal.terminal.text
 net.pascal.terminal.util
 net.pascal.terminal.util.event
+net.pascal.terminalcore.example
+net.pascal.terminalcore.example.paint
+net.pascal.terminalcore.example.screen
+net.pascal.terminalcore.example.util

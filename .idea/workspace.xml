@@ -7,62 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf1cd7e9-02f2-4da3-bc28-754c35870ee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/component/TEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Example/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/src/main/java/net/pascal/terminalcore/example/screen/InfoScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Example/src/main/java/net/pascal/terminalcore/example/screen/InfoScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.1.1-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/TerminalCore-Example-1.1.1-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/InfoScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/InfoScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/InfoScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/InfoScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/InfoScreen$ListVectorHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/InfoScreen$ListVectorHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/InfoScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/InfoScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/LoginScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/classes/net/pascal/terminalcore/example/screen/LoginScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example/target/original-TerminalCore-Example-1.1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Example/target/original-TerminalCore-Example-1.1.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/component/TPasswordField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/component/TPasswordField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/util/AsciiCodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/pascal/terminal/util/AsciiCodeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/Terminal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TDisplayDrawer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TDisplayDrawer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TDisplayDrawer$Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TDisplayDrawer$Queue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TDisplayDrawer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TDisplayDrawer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalApplication$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalApplication$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalApplication$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalApplication$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/application/TerminalScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TCheckBox$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TCheckBox$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TCheckBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TCheckBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TFullTextArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TFullTextArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TLabel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TLabel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TLabel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TListBox$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TListBox$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TListBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TListBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TListSelectBox$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TListSelectBox$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TListSelectBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TListSelectBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TProgressBar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TProgressBar$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TProgressBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TProgressBar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TTextArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TTextArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TTextField.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/component/TTextField.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/layout/RelativeLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/util/AsciiCodeUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/util/AsciiCodeUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/pascal/terminal/util/TMath.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/pascal/terminal/util/TMath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Test.txt" afterDir="false" />
-    </list>
+    <list default="true" id="bf1cd7e9-02f2-4da3-bc28-754c35870ee7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
